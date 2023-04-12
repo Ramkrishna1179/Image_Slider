@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <style>
+      #img_1 {
+        width: 100%;
+        height: 50vh;
+      }
+      #img_2 {
+        width: 50%;
+        height: 50vh;
+      }
+
+      #img_3 {
+        width: 25%;
+        height: 50vh;
+      }
+
+      #img_4 {
+        width: 12.5%;
+        height: 50vh;
+      }
+      div {
+        margin: 0px;
+        padding: 0px;
+      }
+
+      /* .D_none{
+display: none;
+
+} */
+    </style>
+  </head>
+  <body>
+    <button onload="Load()">jkenvjev</button>
+    <div id="parent">
+      <img src="./images/1.jpg" alt="first_img" id="img_1" class="f" />
+      <img src="./images/2.jpg" alt="second_img" id="img_2" class="D_none" />
+      <img src="./images/3.jpg" alt="img_3" id="img_3" class="D_none" />
+      <img src="./images/4.jpg" alt="img_4" id="img_4" class="D_none" />
+    </div>
+  </body>
+</html>
+<script>
+  // function Load(){
+  //   alert("wkjfjhdd")
+  // }
+  document.getElementById("parent").addEventListener("load",function(){
+  alert("Inside onload")})
+  document.getElementById("parent").addEventListener("click", function () {
+    // alert("inside the function")
+  //  document.getElementById("img_2").style.display = "none";
+  //  document.getElementById("img_3").style.display = "none";
+  //  document.getElementById("img_4").style.display = "none";
+
+    setTimeout(() => {
+      let img1 = (document.getElementById("img_1").style.width = "50%");
+      let img2 = (document.getElementById("img_2").style.width="49%");
+      // let img2 = (document.getElementById("img_2").style.display="none");
+      // let img3 = (document.getElementById("img_3").style.display="none");
+      // Today update : - worked on image slider task given by @Anand kumar sir
+      // let img4 = (document.getElementById("img_4").style.display="none");
+    },1000);
+
+    setTimeout(() => {
+
+      let img1 = (document.getElementById("img_1").style.width = "50%");
+      let img2 = (document.getElementById("img_2").style.width="34%");
+      let img3 = (document.getElementById("img_3").style.width="15%");
+      // let img4 = (document.getElementById("img_4").style.display="none");
+    }, 3000);
+
+    setTimeout(() => {
+      let img1 = (document.getElementById("img_1").style.width = "50%");
+      let img2 = (document.getElementById("img_2").style.width="25%");
+      let img3 = (document.getElementById("img_3").style.width="12%");
+      let img4 = (document.getElementById("img_4").style.width="12%");
+    }, 5000);
+
+  });
+</script>
